@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+    
+char c[100];
+int i;
+    printf("Enter message to encrypt:  ");
+        scanf("%s",&c);
+            i = c - 65;
+    
+    printf("%s", c);
+}
