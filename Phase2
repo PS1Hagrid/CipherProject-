@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    
+    char c[100], t;
+    int i, key;
+    
+printf("Enter Text (no spaces): ");
+    scanf("%s[]", &c);
+printf("Encryption Key: ");
+    scanf("%d", &key);
+    {
+    for(i = 0; c[i] != '\0'; ++i){
+        t=c[i];
+        if(t>='a' && t<='z'){
+            t = t+key;
+            if(t>'z'){
+                t=t-'z'+'a'-1;}
+            c[i]=t;}
+        else if(t>='A' && t<='Z'){
+            t=t+key;
+            if(t>'Z'){
+                t=t-'Z'+'A'-1;}
+            c[i]=t;}
+    }
+    printf("Encrypted message: %s\n", c);
+}
+}
